@@ -1,6 +1,6 @@
 :root{
-  --moz-backface-visibility: rgba(255, 255, 255, 0.6);
-  --web-background: rgba(0, 0, 0, 0.2);
+  --section-overlay: rgba(0, 0, 0, 0.5);
+  --background-overlay: rgba(0, 0, 0, 0.2);
 }
 *{
   margin: 0;
