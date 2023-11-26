@@ -15,7 +15,7 @@ const getWeatherData = async (city, units = "metric") =>{
     // weather data destructuring object**************************
     const {
       weather,
-      main: { temp, feels_like, humidity, temp_max, temp_min},
+      main: { temp, feels_like, pressure, humidity, temp_max, temp_min},
       wind: {speed},
       sys: {country},
       name
@@ -26,6 +26,7 @@ const getWeatherData = async (city, units = "metric") =>{
       description,
       iconURL: getIconURL(icon),
       temp,
+      pressure,
       feels_like,
       humidity,
       temp_max,

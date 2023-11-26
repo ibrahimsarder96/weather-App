@@ -73,3 +73,19 @@
 .temperature>h1{
   font-size: 60px;
 }
+
+@media screen and (max-width: 468px) {
+  .section_inputs>button{
+    margin-top: 10px;
+  }
+  .section_inputs, .section_temperature{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--section-overlay);
+    border-radius: 0.4rem;
+  }
+  .section_temperature{
+   margin-top: 10px;
+  }
+}
