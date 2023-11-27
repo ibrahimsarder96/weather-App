@@ -5,8 +5,7 @@ import './WeatherDescription.css';
 
 
 const WeatherDescription = ({weather, units}) => {
-
-  console.log(weather, units);
+  // tarnery operator -------------------
   const tempUnit = units === "metric" ? "°C" : "°F"
   const windUnit = units === "metric" ? "m/s" : "m/h"
 

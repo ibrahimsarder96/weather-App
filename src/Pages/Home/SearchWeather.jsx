@@ -17,23 +17,24 @@ const SearchWeather = () => {
       const data = await getWeatherData(city, units);
       setWeather(data);
 
-      // backgroundImage dynamic change
+      // backgroundImage dynamic change-----------------
       const threshold = units === "metric" ? 20 : 60;
       if(data.temp <= threshold) setBg(coldBg)
       else setBg(hotBg)
     }
     getWeatherAllData();
   }, [units, city]);
-
+  // button toggle -----------------------
   const handleClick = (e) => {
     const button = e.currentTarget;
     const currentUnit = button.innerText.slice(1);
-
+    
     const isCelsius = currentUnit === "C";
+    console.log(isCelsius)
     button.innerText = isCelsius ? "°C" : "°F";
     setUnits(isCelsius ? "metric" : "imperial")
   }
-
+  // enter keypress function -----------------------
   const enterKeyPress = (e) =>{
     if(e.keyCode === 13){
       setCity(e.currentTarget.value);
